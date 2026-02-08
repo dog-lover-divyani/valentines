@@ -5,11 +5,12 @@
 
 body {
   margin: 0;
-  background: linear-gradient(to bottom, #ffd1dc, #fff);
+  background: radial-gradient(circle at top, #fff0f5, #ffe6ee);
   font-family: 'Pacifico', cursive;
   text-align: center;
   overflow-x: hidden;
 }
+
 
 .hero {
   min-height: 100vh;
@@ -17,18 +18,21 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 20px 20px 5px;
+
 }
 
 h1 {
-  font-size: 3rem;
-  color: #e6005c;
+  font-size: 2.8rem;
+  color: #b30047; /* deeper tone */
+  margin-bottom: 8px;
 }
 
 p {
-  font-size: 1.3rem;
-  color: #800033;
+  font-size: 1.15rem;
+  color: #663344;
 }
+
 
 button {
   padding: 12px 30px;
@@ -51,7 +55,8 @@ button:hover {
 
 /* 💌 LOVE */
 .love {
-  padding: 20px 20px 60px;
+  padding: 10px 20px 60px;
+  margin-top: -30px; /* 👈 THIS removes the gap */
 }
 
 .rose {
@@ -60,32 +65,47 @@ button:hover {
 }
 
 .letter {
-  max-width: 700px;
+  max-width: 650px;
   margin: auto;
   font-family: 'Courier Prime', monospace;
-  font-size: 1.1rem;
-  color: #4d0019;
-  background: rgba(255,255,255,0.65);
-  padding: 25px;
-  border-radius: 20px;
+  font-size: 1.05rem;
+  color: #3d0f1f;
+  background: #fffafa;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
+
 
 /* 📱 MOBILE */
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
-    padding: 60px 20px 20px;
+    padding: 50px 20px 5px;
   }
 
-  h1 {
-    font-size: 2.4rem;
+  .love {
+    margin-top: -20px;
   }
+}
 
-  .rose {
-    width: 160px;
+/* 💖 Floating Hearts */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 20px;
+  opacity: 0.8;
+  animation: floatUp linear forwards;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 0.9;
   }
-
-  .letter {
-    margin-top: 15px;
+  to {
+    transform: translateY(-110vh) scale(1.4);
+    opacity: 0;
   }
 }

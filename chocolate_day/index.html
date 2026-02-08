@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Chocolate Day 🍫</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Courier+Prime&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <audio id="bgMusic" preload="auto">
+    <source src="song.mp3" type="audio/mp3">
+  </audio>
+
+  <section class="hero">
+    <h1>Happy Chocolate Day 🍫</h1>
+    <p>Because life — and love — is sweeter with you</p>
+    <button onclick="startChocolate()">For You 🤎</button>
+  </section>
+
+  <section class="choco hidden" id="chocoSection">
+
+    <!-- 💜 PURPLE WRAPPER -->
+    <div class="wrapper" id="wrapper">
+      <div class="wrap left"></div>
+      <div class="wrap right"></div>
+    </div>
+
+    <!-- 🍫 CHOCOLATE BAR -->
+    <div class="chocolate-bar hidden" id="chocoBar">
+      <p id="typewriter"></p>
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

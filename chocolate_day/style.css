@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Pacifico', cursive;
+  background: linear-gradient(to bottom, #3e2723, #6d4c41);
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  padding: 80px 20px 30px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-family: 'Courier Prime', monospace;
+  font-size: 1.3rem;
+}
+
+button {
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  background: #d7a86e;
+  color: #3e2723;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* SECTION */
+.choco {
+  position: relative;
+  padding: 20px;
+}
+
+/* WRAPPER */
+.wrapper {
+  width: 260px;
+  height: 170px;
+  margin: 20px auto;
+  position: relative;
+  z-index: 3;
+}
+
+.wrap {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  background: linear-gradient(135deg, #6a1bb1, #3d0f6d);
+  transition: transform 1s ease-in-out;
+}
+
+.wrap.left {
+  left: 0;
+  border-radius: 16px 0 0 16px;
+}
+
+.wrap.right {
+  right: 0;
+  border-radius: 0 16px 16px 0;
+}
+
+/* RIP ANIMATION */
+.wrapper.rip .left {
+  transform: translateX(-120%);
+}
+
+.wrapper.rip .right {
+  transform: translateX(120%);
+}
+
+/* CHOCOLATE BAR */
+.chocolate-bar {
+  width: 260px;
+  margin: -170px auto 0;
+  background: linear-gradient(135deg, #4e342e, #3e2723);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: inset -6px -6px rgba(0,0,0,0.2),
+              inset 6px 6px rgba(255,255,255,0.05);
+  z-index: 1;
+}
+
+/* TEXT ON CHOCOLATE */
+.chocolate-bar p {
+  font-family: 'Courier Prime', monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+  margin: 0;
+}
+
+/* FLOATING */
+.choco-fall {
+  position: fixed;
+  top: -20px;
+  font-size: 22px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
