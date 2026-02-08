@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Rose Day 🌹</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Courier+Prime&display=swap" rel="stylesheet">
+</head>
+<body>
+
+ <audio id="bgMusic" preload="auto">
+  <source src="romantic_violin.mp3" type="audio/mp3">
+</audio>
+
+
+
+  <!-- Falling Petals -->
+  <div class="petals"></div>
+
+  <section class="hero">
+    <h1>Happy Rose Day 🌹</h1>
+    <p>For the boy who feels like home</p>
+    <button onclick="showLove()">For You 💌</button>
+  </section>
+
+  <section class="love hidden" id="loveSection">
+    <img src="rose.gif" class="rose" onclick="bloomRose()">
+
+    <div class="letter">
+      <p id="typewriter"></p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

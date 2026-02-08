@@ -1,0 +1,112 @@
+* {
+  cursor: url("heart.png") 16 16, auto;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #ffd1dc, #fff);
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  overflow-x: hidden; /* only block horizontal scroll */
+}
+
+.hero {
+  min-height: 50vh;   /* 👈 NOT height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #e6005c;
+}
+
+p {
+  font-size: 1.3rem;
+  color: #800033;
+}
+
+button {
+  padding: 12px 28px;
+  border-radius: 25px;
+  border: none;
+  background: #ff4d88;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+
+  width: auto;          /* 👈 IMPORTANT */
+  display: inline-block;/* 👈 IMPORTANT */
+}
+
+
+button:hover {
+  background: #e6005c;
+}
+
+.hidden {
+  display: none;
+}
+
+.love {
+  padding: 20px;
+  margin-top: -20px; /* 👈 pulls it UP */
+}
+
+
+.rose {
+  width: 180px;
+  margin-bottom: 20px;
+  transition: transform 0.6s;
+}
+
+.rose:hover {
+  transform: scale(1.15);
+}
+
+.letter {
+  max-width: 700px;
+  margin: auto;
+  font-family: 'Courier Prime', monospace;
+  font-size: 1.1rem;
+  color: #4d0019;
+  background: rgba(255,255,255,0.6);
+  padding: 25px;
+  border-radius: 20px;
+}
+
+/* 🌹 Falling Petals */
+.petal {
+  position: fixed;
+  top: -10px;
+  color: #ff4d88;
+  font-size: 20px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+
+/* 📱 MOBILE FIX */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 40px 20px 10px;
+  }
+
+  .love {
+    padding-top: 10px;
+    margin-top: -10px;
+  }
+
+  .rose {
+    width: 160px;
+  }
+}
