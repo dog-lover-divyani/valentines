@@ -1,0 +1,91 @@
+* {
+  cursor: url("heart.png") 16 16, auto;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #ffd1dc, #fff);
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #e6005c;
+}
+
+p {
+  font-size: 1.3rem;
+  color: #800033;
+}
+
+button {
+  padding: 12px 30px;
+  border-radius: 25px;
+  border: none;
+  background: #ff4d88;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: #e6005c;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 💌 LOVE */
+.love {
+  padding: 20px 20px 60px;
+}
+
+.rose {
+  width: 180px;
+  margin: 10px auto 15px;
+}
+
+.letter {
+  max-width: 700px;
+  margin: auto;
+  font-family: 'Courier Prime', monospace;
+  font-size: 1.1rem;
+  color: #4d0019;
+  background: rgba(255,255,255,0.65);
+  padding: 25px;
+  border-radius: 20px;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 60px 20px 20px;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .rose {
+    width: 160px;
+  }
+
+  .letter {
+    margin-top: 15px;
+  }
+}
